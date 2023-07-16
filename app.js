@@ -1,13 +1,13 @@
 require("dotenv").config();
 require("./config/database").connect();
-const express = require("express");
+const express = require("express"); 
 // importing user context
 const User = require("./model/user");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 
 // Logic goes here
